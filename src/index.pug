@@ -1,0 +1,85 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Medi
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="assets/css/style.css")
+    body
+        .page
+            section.form__section
+                h2.form__title Чтобы <span>заказать индивидуальные стельки igli</span> - запишитесь на бесплатное сканирование стоп
+                .container
+                    form.form
+                        .form__block
+
+                            .form__group.form__group--desktop
+
+                                .form__group
+                                    label(for="name") Имя <span>*</span>
+                                    input(type="text" id="name" required)
+
+                                .form__group
+                                    label(for="lastName") Фамилия
+                                    input(type="text" id="lastName")
+
+                            .form__group
+                                label(for="phone") Ваш телефон <span>*</span>
+                                input(type="text" id="phone" placeholder="+7 (__) ___ - __ - __" required)
+
+                            .form__group
+                                label(for="diskont") Номер дисконтной карты
+                                input(type="text" id="diskont")
+
+                            .form__group
+                                label Назначение врача (jpg, png, pdf)
+                                input(type="file" id="upload" hidden)
+                                label(for="upload") Прикрепить файл
+                                span Файл не выбран
+
+                        .form__block
+
+                            .form__group
+                                label(for="name") Салон <span>*</span>
+                                select(required)
+                                    option(value="val1") м. Ленинский проспект
+                                    option(value="val1") м. Бульвар Дмитрия Донского
+                                span.address
+                                    img(src="assets/images/placeholder.png", alt="icon")
+                                    span Санкт-Петербург, бульвар Новаторов, дом 13
+                                span.address
+                                    img(src="assets/images/clock.png", alt="icon")
+                                    span пн-пт: с 9:00 до 21:00, сб-вс: с 10:00 до 20:00
+
+                            .form__group.form__group--desktop
+
+                                .form__group
+                                    label(for="date") Дата <span>*</span>
+                                    input(type="date" id="date" required)
+
+                                .form__group
+                                    label(for="time") Время <span>*</span>
+                                    input(type="time" id="time" required)
+
+                            .form__group
+                                input(type="checkbox" id="politics" required)
+                                label(for="politics") Я соглашаюсь с <a>Политикой в отношении обработки персональных данных</a><span> *</span>
+
+                            .form__group.btn__group
+                                button(type="reset") Сбросить
+                                button(type="submit") Записаться
+
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+    script(src="assets/js/app.js")
+
+
+
+
+
+
+
+

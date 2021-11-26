@@ -1,0 +1,291 @@
+@import 'mixins';
+
+html {
+    font-size: 65.5%;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, img ,ul, li, button, input {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.page {
+    position: relative;
+    min-width: 320px;
+    min-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 992px;
+    width: 100%;
+
+    @include breakpoint(xs) {
+        padding: 0 30px;
+    }
+}
+
+section {
+    padding: 30px 0;
+    background: #F7F7F7;
+}
+
+h2 {
+    margin: 0 auto 20px;
+    max-width: 260px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+
+    @include breakpoint(xs) {
+        max-width: 100%;
+        font-size: 22px;
+    }
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    outline: none;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+label:not(label[for=politics]) {
+    display: block;
+}
+
+label > span {
+    color: red;
+}
+
+label[for="upload"] {
+    margin: 0;
+    padding: 10px 5px;
+    display: inline-block!important;
+    color: #e20074;
+    border: 1px solid #e20074;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        padding: 10px 25px;
+    }
+}
+
+label[for="upload"] + span {
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 14px;
+    color: grey;
+
+    @include breakpoint(lg) {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+}
+
+label[for="politics"] {
+    color: grey;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+label[for="politics"] a {
+    color: #e20074;
+    cursor: pointer;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 540px;
+
+    @include breakpoint(lg) {
+        max-width: 992px;
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+    }
+}
+
+.form__title {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: block;
+        max-width: 750px;
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+.form__title span {
+
+    @include breakpoint(lg) {
+        color: #e20074;
+    }
+}
+
+
+.form__group {
+    margin-top: 20px;
+}
+
+.form__group--desktop .form__group:last-child {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}
+
+.form__group--desktop {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.form__group input {
+    padding: 15px;
+    background: #efefef;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.form__group input:focus {
+    background: #fff;
+    outline: none;
+}
+
+.form__group .address {
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    font-size: 14px;
+}
+
+.form__group .address span {
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+}
+
+.form__group span.address:last-child {
+    padding-top: 15px;
+    border-top: 1px solid #80808047;
+}
+
+.form__group .address img {
+    width: 16px;
+    margin-right: 5px;
+}
+
+.form__group select {
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #efefef;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+}
+
+.form__group select:focus {
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+}
+
+.form__block {
+
+    @include breakpoint(lg) {
+        width: 50%;
+    }
+}
+
+input[type="time"], input[type="date"] {
+
+    @include breakpoint(lg) {
+        width: 200px;
+    }
+}
+
+input[type="checkbox"] {
+    display: inline;
+    width: 12px;
+    transform: scale(1.2);
+    margin-left: 2px;
+}
+
+.btn__group {
+    display: flex;
+    gap: 25px;
+}
+
+button[type="reset"] {
+    display: none;
+    background: #fff;
+    margin-top: 25px;
+    padding: 20px;
+    width: 100%;
+    color: grey;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-size: 16px;
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}
+
+button[type="submit"] {
+    margin-top: 25px;
+    padding: 20px;
+    width: 100%;
+    background: #e20074;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <section class="form__section">
+        <h2 class="form__title">Чтобы <span>заказать индивидуальные стельки igli</span> - запишитесь на бесплатное сканирование стоп</h2>
+        <div class="container">
+          <form class="form">
+            <div class="form__block">
+              <div class="form__group form__group--desktop">
+                <div class="form__group">
+                  <label for="name">Имя <span>*</span></label>
+                  <input type="text" id="name" required>
+                </div>
+                <div class="form__group">
+                  <label for="lastName">Фамилия</label>
+                  <input type="text" id="lastName">
+                </div>
+              </div>
+              <div class="form__group">
+                <label for="phone">Ваш телефон <span>*</span></label>
+                <input type="text" id="phone" placeholder="+7 (__) ___ - __ - __" required>
+              </div>
+              <div class="form__group">
+                <label for="diskont">Номер дисконтной карты</label>
+                <input type="text" id="diskont">
+              </div>
+              <div class="form__group">
+                <label>Назначение врача (jpg, png, pdf)</label>
+                <input type="file" id="upload" hidden>
+                <label for="upload">Прикрепить файл</label><span>Файл не выбран</span>
+              </div>
+            </div>
+            <div class="form__block">
+              <div class="form__group">
+                <label for="name">Салон <span>*</span></label>
+                <select required>
+                  <option value="val1">м. Ленинский проспект</option>
+                  <option value="val1">м. Бульвар Дмитрия Донского</option>
+                </select><span class="address"><img src="assets/images/placeholder.png" alt="icon"><span>Санкт-Петербург, бульвар Новаторов, дом 13</span></span><span class="address"><img src="assets/images/clock.png" alt="icon"><span>пн-пт: с 9:00 до 21:00, сб-вс: с 10:00 до 20:00</span></span>
+              </div>
+              <div class="form__group form__group--desktop">
+                <div class="form__group">
+                  <label for="date">Дата <span>*</span></label>
+                  <input type="date" id="date" required>
+                </div>
+                <div class="form__group">
+                  <label for="time">Время <span>*</span></label>
+                  <input type="time" id="time" required>
+                </div>
+              </div>
+              <div class="form__group">
+                <input type="checkbox" id="politics" required>
+                <label for="politics">Я соглашаюсь с <a>Политикой в отношении обработки персональных данных</a><span> *</span></label>
+              </div>
+              <div class="form__group btn__group">
+                <button type="reset">Сбросить</button>
+                <button type="submit">Записаться</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</html>
